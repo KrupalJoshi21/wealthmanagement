@@ -1,0 +1,54 @@
+{
+	"name": "Blob_CSVFiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BlobStorage_Source",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "Data_Files",
+				"container": "sourcedata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "AccountID",
+				"type": "String"
+			},
+			{
+				"name": "ClientID",
+				"type": "String"
+			},
+			{
+				"name": "AccountType",
+				"type": "String"
+			},
+			{
+				"name": "OpenDate",
+				"type": "String"
+			},
+			{
+				"name": "BaseCurrency",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

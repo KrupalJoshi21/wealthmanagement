@@ -1,0 +1,50 @@
+{
+	"name": "AzureSqlWealth",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureSQLDB_Warehouse",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "AccountID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ClientID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AccountType",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OpenDate",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BaseCurrency",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Status",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "staging",
+			"table": {
+				"value": "@dataset().TableName",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

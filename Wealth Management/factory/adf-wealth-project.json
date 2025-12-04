@@ -1,0 +1,9 @@
+{
+	"name": "adf-wealth-project",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6cd52a60-49ba-46ab-9c06-09e637d66101",
+		"tenantId": "8a2e2cb2-5fd2-472d-81f2-678f16e6c6f2"
+	}
+}
